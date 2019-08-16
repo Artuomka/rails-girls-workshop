@@ -1,0 +1,12 @@
+.git
+/log/*
+!/log/.keep
+!/tmp/.keep
+!/tmp/pids/.keep
+/vendor/bundle
+/public/assets
+/config/credentials.local.yml
+/.bundle
+/venv
+/tmp/cache
+/public/uploads

@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'icomoon';
+  src:
+    url('fonts/icomoon.ttf?bgzu7c') format('truetype'),
+    url('fonts/icomoon.woff?bgzu7c') format('woff'),
+    url('fonts/icomoon.svg?bgzu7c#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.icon {
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-transform: none;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-circle-check-filled:before {
+  content: '\e900';
+}
+.icon-circle-check:before {
+  content: '\e901';
+}
+.icon-circle-check-bold:before {
+  content: '\e902';
+}
+.icon-angle-down:before {
+  content: '\e903';
+}
+.icon-angle-up:before {
+  content: '\e904';
+}
+.icon-angle-left:before {
+  content: '\e905';
+}
+.icon-arrow-down:before {
+  content: '\e906';
+}
+.icon-arrow-up:before {
+  content: '\e907';
+}
+.icon-calendar:before {
+  content: '\e908';
+}
+.icon-check:before {
+  content: '\e909';
+}
+.icon-cross:before {
+  content: '\e90a';
+}
+.icon-resize:before {
+  content: '\e90b';
+}
+.icon-bin:before {
+  content: '\e90c';
+}
+.icon-edit:before {
+  content: '\e90d';
+}
+.icon-circle-info:before {
+  content: '\e90e';
+}
+.icon-ellipsis:before {
+  content: '\e90f';
+}
+.icon-triangle-warning:before {
+  content: '\e910';
+}
+.icon-triangle-warning-sm:before {
+  content: '\e911';
+}

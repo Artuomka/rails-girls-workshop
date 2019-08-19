@@ -1,7 +1,7 @@
-$app-colors: (
+$colors: (
   // Basic colors
-  black:          #000,
-  white:          #fff,
+  'black':          #000,
+  'white':          #fff,
   // Accent colors
   blue-100:       #2566f2,
   blue-110:       #2360e4,
@@ -12,4 +12,10 @@ $app-colors: (
   yellow-100:     #fc0, // ffcc00
   lightblue-100:  #00c6ff,
   violet-100:     #9013fe,
+
+  grey-100:          #6f6f6f,
+  grey-90:           #9b9b9b,
+  grey-80:           #d5d5d5,
+  grey-70:           #e7e7e7,
+  grey-60:           #f7f7f9,
 );

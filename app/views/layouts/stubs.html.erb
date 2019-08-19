@@ -10,6 +10,20 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="main-wrap">
+      <header class="main-header">
+        <a href="/" class="main-header__logo">
+          <%=image_tag('logo.svg', alt: 'BeFocused')%>
+        </a>
+        <a href="/" class="main-header__info-link">
+          <i class="icon icon-circle-info mr-8"></i>
+          About
+        </a>
+      </header>
+
+      <div class="main-content">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>

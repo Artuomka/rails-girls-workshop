@@ -1,3 +1,7 @@
-@function get-color($color-name, $lightness) {
-  @return map-get(map-get($app-colors, $color-name), $lightness);
+@function color($color) {
+  @return map-get($colors, $color);
+}
+
+@function division($a, $b) {
+  @return $a / $b;
 }

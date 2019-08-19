@@ -1,3 +1,25 @@
-.header {
-  position: absolute;
+.main-header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 68px;
+  padding-right: $gutter-xs * 2;
+  padding-left: $gutter-xs * 2;
+  background-color: white;
+  box-shadow: $shadow-sm;
+  @include media-breakpoint-up(md) {
+    padding-right: $gutter-md * 2;
+    padding-left: $gutter-md * 2;
+  }
+}
+.main-header__info-link {
+  @include transition(color);
+  display: flex;
+  color: color(grey-90);
+  font-size: 16px;
+  line-height: division(24, 16);
+  &:hover {
+    color: color(grey-100);
+  }
 }

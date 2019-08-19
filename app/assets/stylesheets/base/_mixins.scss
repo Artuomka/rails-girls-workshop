@@ -16,3 +16,9 @@
     @content;
   }
 }
+
+@mixin transition ($properties, $duration: $transition-duration, $function: $transition-function) {
+  transition-property: $properties;
+  transition-duration: $duration;
+  transition-timing-function: $function;
+}

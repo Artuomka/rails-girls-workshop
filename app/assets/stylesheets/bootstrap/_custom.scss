@@ -1,5 +1,11 @@
 $font-family-sans-serif: 'Nunito Sans', sans-serif;
 $body-color: black;
+$body-bg: color(grey-60);
+
+$link-hover-decoration: none;
+$link-hover-color: reset; // invalid value to unset the hover color
+$link-color: inherit;
+
 
 $gutter-xs: 8px;
 $gutter-md: 12px;

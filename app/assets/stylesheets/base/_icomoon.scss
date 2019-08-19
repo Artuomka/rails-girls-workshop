@@ -1,12 +1,13 @@
+// scss-lint:disable VariableForProperty
 @font-face {
   font-family: 'icomoon';
-  src:
-    url('fonts/icomoon.ttf?bgzu7c') format('truetype'),
+  src: url('fonts/icomoon.ttf?bgzu7c') format('truetype'),
     url('fonts/icomoon.woff?bgzu7c') format('woff'),
     url('fonts/icomoon.svg?bgzu7c#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
+
 .icon {
   font-family: 'icomoon' !important;
   font-style: normal;

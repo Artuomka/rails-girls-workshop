@@ -1,7 +1,7 @@
 version: '3.4'
 
 services:
-  app: &app
+  rails:
     build:
       context: .
       dockerfile: ./.dockerdev/Dockerfile
@@ -10,23 +10,25 @@ services:
         PG_MAJOR: '11'
         NODE_MAJOR: '11'
         BUNDLER_VERSION: '1.17.3'
-    image: rails_girls_workshop:1.0.0
     tmpfs:
       - /tmp
-
-  backend: &backend
-    <<: *app
     stdin_open: true
     tty: true
+    command: bundle exec rails server -b 0.0.0.0
+    entrypoint: './.dockerdev/entrypoint.sh'
+    ports:
+      - '3000:3000'
     volumes:
       - .:/app:cached
       - rails_cache:/app/tmp/cache
       - bundle:/bundle
       - .dockerdev/.psqlrc:/root/.psqlrc:ro
     environment:
+      - PG_HOST=postgres
+      - PG_PASSWORD=postgres
+      - PG_USER=postgres
       - NODE_ENV=development
       - RAILS_ENV=${RAILS_ENV:-development}
-      - DATABASE_URL=postgres://postgres:postgres@postgres:5432
       - BOOTSNAP_CACHE_DIR=/bundle/bootsnap
       - WEB_CONCURRENCY=1
       - HISTFILE=/app/log/.bash_history
@@ -35,19 +37,6 @@ services:
     depends_on:
       - postgres
 
-  runner:
-    <<: *backend
-    command: /bin/bash
-    ports:
-      - '3000:3000'
-      - '3002:3002'
-
-  rails:
-    <<: *backend
-    command: bundle exec rails server -b 0.0.0.0
-    ports:
-      - '3000:3000'
-
   postgres:
     image: postgres:11.1
     volumes:
@@ -55,6 +44,9 @@ services:
       - postgres:/var/lib/postgresql/data
       - ./log:/root/log:cached
     environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=rails_girls_workshop_development
       - PSQL_HISTFILE=/root/log/.psql_history
     ports:
       - 5432

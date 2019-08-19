@@ -6,6 +6,8 @@ ARG PG_MAJOR
 ARG NODE_MAJOR
 ARG BUNDLER_VERSION
 
+ENV APP_HOME /app
+
 # Add PostgreSQL to sources list
 RUN curl -sSL https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - \
   && echo 'deb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main' $PG_MAJOR > /etc/apt/sources.list.d/pgdg.list
@@ -43,4 +45,6 @@ RUN gem update --system && \
 # Create a directory for the app code
 RUN mkdir -p /app
 
-WORKDIR /app
+WORKDIR $APP_HOME
+COPY Gemfile* $APP_HOME/
+RUN bundle install

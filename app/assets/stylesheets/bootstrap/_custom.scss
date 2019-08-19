@@ -1,16 +1,22 @@
+$font-family-sans-serif: 'Nunito Sans', sans-serif;
+$body-color: black;
+
+$gutter-xs: 8px;
+$gutter-md: 12px;
+
 $grid-breakpoints: (
   xs: 0,
-  sm: 680px,
-  md: 1024px,
-  lg: 1280px,
-  xl: 1440px
+  md: 768px,
+  lg: 1440px
 );
 
 $container-max-widths: (
-  xs: 520px,
-  sm: 720px,
-  md: 976px,
-  xl: 1104px
+  xs: 375px,
+  md: 728px,
+  lg: 1224px
 );
 
-$grid-gutter-width: 24px;
+$grid-gutter-widths: (
+  xs: $gutter-xs * 2,
+  md: $gutter-md * 2,
+);

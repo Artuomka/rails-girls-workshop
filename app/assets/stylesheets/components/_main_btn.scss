@@ -1,0 +1,19 @@
+.main-btn {
+  @include transition(background-color, color);
+  display: inline-block;
+  min-width: 180px;
+  height: 50px;
+  padding-right: 24px;
+  padding-left: 16px;
+  border-radius: 10px;
+  background-color: color(blue-100);
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  &:hover {
+    background-color: color(blue-110);
+  }
+  &:active {
+    background-color: color(blue-120);
+  }
+}

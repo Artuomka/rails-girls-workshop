@@ -1,3 +1,6 @@
+// Base
+$base-font: 'Nunito Sans', sans-serif;
+
 // Shadow
 $shadow-xs: 0 2px 4px 0 rgba(129, 143, 157, 0.1);
 $shadow-sm: 0 2px 8px 0 rgba(129, 143, 157, 0.2);
@@ -6,3 +9,9 @@ $shadow-md: 0 8px 16px 0 rgba(129, 143, 157, 0.2);
 // Animation
 $transition-duration: 0.1s;
 $transition-function: ease-in-out;
+
+// Header
+$header-height: 68px;
+
+// Grid
+$container-max-width-lg: 1224px;

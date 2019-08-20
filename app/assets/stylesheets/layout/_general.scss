@@ -5,12 +5,15 @@
 }
 .main-content {
   display: flex;
+  flex-direction: column;
   flex-grow: 1;
   flex-shrink: 0;
-  padding-top: 28px;
-  padding-bottom: 28px;
-  @include media-breakpoint-up(md) {
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
+  height: calc(100vh - #{$header-height});
+  overflow-y: auto;
+  // padding-top: 28px;
+  // padding-bottom: 28px;
+  // @include media-breakpoint-up(md) {
+  //   padding-top: 48px;
+  //   padding-bottom: 48px;
+  // }
 }

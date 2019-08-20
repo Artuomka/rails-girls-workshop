@@ -1,11 +1,11 @@
-$font-family-sans-serif: 'Nunito Sans', sans-serif;
+$font-family-base: $base-font;
 $body-color: black;
 $body-bg: color(grey-60);
+$paragraph-margin-bottom: 12px;
 
 $link-hover-decoration: none;
 $link-hover-color: reset; // invalid value to unset the hover color
 $link-color: inherit;
-
 
 $gutter-xs: 8px;
 $gutter-md: 12px;
@@ -19,7 +19,7 @@ $grid-breakpoints: (
 $container-max-widths: (
   xs: 375px,
   md: 728px,
-  lg: 1224px
+  lg: $container-max-width-lg
 );
 
 $grid-gutter-widths: (

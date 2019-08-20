@@ -22,6 +22,12 @@
   letter-spacing: -0.2px;
   line-height: division(32, 24);
 }
+.goals-page__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
 .goals-page__nav {
   margin-bottom: 16px;
   padding-right: 20px;

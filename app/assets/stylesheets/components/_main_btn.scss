@@ -1,15 +1,16 @@
 .main-btn {
   @include transition(background-color, color);
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-width: 180px;
   height: 50px;
   padding-right: 24px;
-  padding-left: 16px;
-  border-radius: 10px;
+  padding-left: 24px;
+  border-radius: $border-radius;
   background-color: color(blue-100);
   color: white;
   font-size: 18px;
-  text-align: center;
   &:hover {
     background-color: color(blue-110);
   }

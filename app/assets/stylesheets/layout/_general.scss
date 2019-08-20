@@ -10,10 +10,4 @@
   flex-shrink: 0;
   height: calc(100vh - #{$header-height});
   overflow-y: auto;
-  // padding-top: 28px;
-  // padding-bottom: 28px;
-  // @include media-breakpoint-up(md) {
-  //   padding-top: 48px;
-  //   padding-bottom: 48px;
-  // }
 }

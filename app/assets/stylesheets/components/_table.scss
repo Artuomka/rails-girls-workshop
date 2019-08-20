@@ -1,0 +1,74 @@
+.main-table {
+  width: 100%;
+  font-size: 16px;
+  line-height: division(24, 16);
+  thead {
+    border-bottom: 3px solid rgba(black, 0.1);
+  }
+  td,
+  th {
+    padding: 8px 12px;
+    vertical-align: middle;
+    @include media-breakpoint-up(md) {
+      &:first-child {
+        padding-left: 20px;
+      }
+      &:last-child {
+        padding-right: 20px;
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      &:first-child {
+        padding-left: 40px;
+      }
+      &:last-child {
+        padding-right: 40px;
+      }
+    }
+  }
+  th {
+    height: 68px;
+    font-weight: 400;
+  }
+  td {
+    height: 48px;
+  }
+  tr {
+    border-bottom: 1px solid rgba(black, 0.1);
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+.main-table__row--hightlight {
+  background-color: color(lightblue-10);
+}
+.main-table__row--checked {
+  color: color(grey-90);
+}
+.main-table__check {
+  position: relative;
+  margin-right: 8px;
+  color: rgba(black, 0.2);
+  @include media-breakpoint-up(md) {
+    margin-right: 16px;
+  }
+  &:before {
+    position: relative;
+    z-index: 2;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 3px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: white;
+  }
+}
+.main-table__check--active {
+  color: color(green-100);
+}

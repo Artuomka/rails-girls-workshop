@@ -1,0 +1,23 @@
+.main-tab {
+  display: flex;
+  overflow-x: auto;
+}
+.main-tab__item {
+  @include transition(color);
+  flex-shrink: 0;
+  margin-right: 20px;
+  padding-top: 23px;
+  padding-bottom: 17px;
+  border-bottom: 4px solid transparent;
+  color: color(grey-90);
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    color: $active-color;
+  }
+}
+.main-tab__item--active {
+  border-color: $active-color;
+  color: $active-color;
+}

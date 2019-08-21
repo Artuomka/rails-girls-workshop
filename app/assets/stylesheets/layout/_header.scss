@@ -1,7 +1,7 @@
 .main-header {
   display: flex;
   position: relative;
-  z-index: 2;
+  z-index: $header-z-index;
   flex-shrink: 0;
   align-items: center;
   justify-content: space-between;

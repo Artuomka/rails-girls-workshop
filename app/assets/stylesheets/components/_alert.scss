@@ -1,0 +1,26 @@
+.main-alert {
+  display: flex;
+  position: fixed;
+  z-index: $alert-z-index;
+  top: $header-height;
+  right: 0;
+  left: 0;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 8px 12px;
+}
+.main-alert--success {
+  background-color: color(lightgreen-50);
+  color: color(green-100);
+}
+.main-alert__icon {
+  flex-shrink: 0;
+  margin-right: 12px;
+}
+.main-alert__txt {
+  margin-bottom: 0;
+  padding-top: 2px;
+  font-size: 14px;
+  letter-spacing: -0.19px;
+  line-height: division(20, 14);
+}

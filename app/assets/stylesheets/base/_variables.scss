@@ -15,6 +15,11 @@ $transition-function: ease-in-out;
 
 // Header
 $header-height: 68px;
+$header-z-index: 10;
 
 // Grid
 $container-max-width-lg: 1224px;
+
+
+// Alert
+$alert-z-index: $header-z-index - 1;

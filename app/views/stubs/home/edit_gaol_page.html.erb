@@ -1,16 +1,15 @@
-<!-- This page has the same HTML as 'Edit goal' page. The only difference is title name -->
+<!-- This page ha sthe same HTML as 'Create goal' page. The only difference is title name -->
 <div class="goals-page">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 offset-lg-2">
-        <h1 class="goals-page__title">Create a Goal</h1>
+        <h1 class="goals-page__title">Edit Goal</h1>
 
         <div class="create-goal__card main-card">
           <form>
-            <!-- To show error style add main-input--error to main-input -->
-            <div class="main-input main-input--error">
+            <div class="main-input">
               <label class="main-input__label" for="goal_title">Goal Title</label>
-              <input class="main-input__field" type="text" id="goal_title" />
+              <input class="main-input__field" type="text" id="goal_title" value="Learn RSpec" />
               <div class="main-input__message">
                 <i class="main-input__message-icon icon icon-triangle-warning-sm"></i>
                 <span class="main-input__message-txt">Error message</span>
@@ -19,7 +18,7 @@
 
             <div class="main-input">
               <label class="main-input__label" for="goal_descr">Description</label>
-              <textarea rows="4" class="main-input__field main-input__field--textarea"></textarea>
+              <textarea rows="4" class="main-input__field main-input__field--textarea">Per mutat paulo mucius in. Aeterno democritum id sit, pro ut aliquip conceptam, cum alii nisl aliquid ex. Tritani corrumpit dignissim mei ex. An dicunt efficiantur intellegebat eos. Id est sumo habeo recteque, eum cu detraxit accusata, cu sea iusto interesset.</textarea>
               <div class="main-input__message">
                 <i class="main-input__message-icon icon icon-triangle-warning-sm"></i>
                 <span class="main-input__message-txt">Error message</span>
@@ -41,7 +40,7 @@
 
             <div class="create-goal__input-short main-input">
               <label class="main-input__label" for="goal_date">Due Date</label>
-              <input class="main-input__field main-input__field--xs" type="date" id="goal_date" />
+              <input class="main-input__field main-input__field--xs" type="date" id="goal_date" value="2019-09-01" />
               <div class="main-input__message">
                 <i class="main-input__message-icon icon icon-triangle-warning-sm"></i>
                 <span class="main-input__message-txt">Error message</span>

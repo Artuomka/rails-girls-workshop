@@ -1,0 +1,22 @@
+$create-goal-card-footer: 68px;
+
+.create-goal__card {
+  margin-bottom: $create-goal-card-footer + 20px;
+  padding: 20px 20px 1px;
+}
+.create-goal__form-footer {
+  display: flex;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: flex-end;
+  height: $create-goal-card-footer;
+  padding: 14px 16px;
+  background-color: white;
+}
+.create-goal__input-short {
+  @include media-breakpoint-up(md) {
+    max-width: 240px;
+  }
+}

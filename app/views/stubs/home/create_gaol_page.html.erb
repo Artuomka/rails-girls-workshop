@@ -1,0 +1,60 @@
+<!-- This page ha sthe same HTML as 'Edit goal' page. The only difference is title name -->
+<div class="goals-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <h1 class="goals-page__title">Create a Goal</h1>
+
+        <div class="create-goal__card main-card">
+          <form>
+            <!-- To show error style add main-input--error to main-input -->
+            <div class="main-input main-input--error">
+              <label class="main-input__label" for="goal_title">Goal Title</label>
+              <input class="main-input__field" type="text" id="goal_title" />
+              <div class="main-input__message">
+                <i class="main-input__message-icon icon icon-triangle-warning-sm"></i>
+                <span class="main-input__message-txt">Error message</span>
+              </div>
+            </div>
+
+            <div class="main-input">
+              <label class="main-input__label" for="goal_descr">Description</label>
+              <textarea rows="4" class="main-input__field main-input__field--textarea"></textarea>
+              <div class="main-input__message">
+                <i class="main-input__message-icon icon icon-triangle-warning-sm"></i>
+                <span class="main-input__message-txt">Error message</span>
+              </div>
+            </div>
+
+            <div class="create-goal__input-short main-input">
+              <label class="main-input__label" for="goal_priority">Priority</label>
+              <select id="goal_priority" class="main-input__field main-input__field--xs">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+              </select>
+              <div class="main-input__message">
+                <i class="main-input__message-icon icon icon-triangle-warning-sm"></i>
+                <span class="main-input__message-txt">Error message</span>
+              </div>
+            </div>
+
+            <div class="create-goal__input-short main-input">
+              <label class="main-input__label" for="goal_date">Due Date</label>
+              <input class="main-input__field main-input__field--xs" type="date" id="goal_date" />
+              <div class="main-input__message">
+                <i class="main-input__message-icon icon icon-triangle-warning-sm"></i>
+                <span class="main-input__message-txt">Error message</span>
+              </div>
+            </div>
+
+            <div class="create-goal__form-footer">
+              <button type="button" class="main-btn main-btn--xs main-btn--grey mr-16">Cancel</button>
+              <button type="submit" class="main-btn main-btn--xs">Create</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

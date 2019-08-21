@@ -1,9 +1,17 @@
 .main-table {
-  width: 100%;
   font-size: 16px;
   line-height: division(24, 16);
   thead {
     border-bottom: 3px solid rgba(black, 0.1);
+  }
+  tbody tr {
+    @include transition(background-color);
+    &:hover {
+      background-color: color(grey-60);
+    }
+    &.main-table__row--hightlight {
+      background-color: color(lightblue-10);
+    }
   }
   td,
   th {
@@ -39,9 +47,6 @@
       border-bottom: none;
     }
   }
-}
-.main-table__row--hightlight {
-  background-color: color(lightblue-10);
 }
 .main-table__row--checked {
   color: color(grey-90);

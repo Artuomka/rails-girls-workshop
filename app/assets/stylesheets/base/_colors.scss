@@ -1,7 +1,18 @@
 $colors: (
   // Basic colors
-  'black':          #000,
-  'white':          #fff,
+  black-100:      #000,
+  black-80:       rgba(black, 0.8),
+  black-60:       rgba(black, 0.6),
+  black-40:       rgba(black, 0.4),
+  black-20:       rgba(black, 0.2),
+  black-10:       rgba(black, 0.1),
+  white-100:      #fff,
+  white-80:       rgba(white, 0.8),
+  white-60:       rgba(white, 0.6),
+  white-40:       rgba(white, 0.4),
+  white-20:       rgba(white, 0.2),
+  white-10:       rgba(white, 0.1),
+
   // Accent colors
   blue-100:       #2566f2,
   blue-110:       #2360e4,

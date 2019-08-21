@@ -1,5 +1,5 @@
 .main-btn {
-  @include transition(background-color, color);
+  @include transition(background-color);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -23,4 +23,13 @@
   height: 40px;
   padding-right: 16px;
   padding-left: 16px;
+}
+.main-btn--grey {
+  background-color: color(black-20);
+  &:hover {
+    background-color: color(black-40);
+  }
+  &:active {
+    background-color: color(black-60);
+  }
 }

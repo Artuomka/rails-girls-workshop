@@ -13,6 +13,10 @@
   background-color: color(lightgreen-50);
   color: color(green-100);
 }
+.main-alert--info {
+  background-color: color(lightblue-20);
+  color: color(blue-100);
+}
 .main-alert__icon {
   flex-shrink: 0;
   margin-right: 12px;

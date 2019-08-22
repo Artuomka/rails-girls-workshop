@@ -1,9 +1,16 @@
 <div class="goals-page">
   <div class="goals-page__container container">
+    <!-- Update goal alert -->
     <div class="main-alert main-alert--success">
       <i class="main-alert__icon icon icon-circle-check-bold"></i>
       <p class="main-alert__txt">Your goal has been successfully updated.</p>
     </div>
+
+    <!-- Delete goal alert -->
+    <!-- <div class="main-alert main-alert--info">
+      <i class="main-alert__icon icon icon-circle-check-bold"></i>
+      <p class="main-alert__txt">Your goal has been successfully deleted.</p>
+    </div> -->
 
     <div class="goals-page__header">
       <h1 class="goals-page__title">My Goals</h1>
@@ -23,7 +30,7 @@
 
     <div class="goals-page__card main-card">
       <div class="overflow-x-auto">
-        <table class="main-table">
+        <table class="goals-page__table main-table">
           <thead>
             <tr>
               <th>Goal Name</th>
@@ -37,7 +44,7 @@
             <td>
               <div class="d-flex align-items-center">
                 <i class="main-table__check icon icon-circle-check"></i>
-                Learn RSpec
+                <p class="goals-page__table-txt mb-0">Learn RSpec</p>
               </div>
             </td>
             <td>12.08.2019</td>
@@ -52,7 +59,7 @@
             <td>
               <div class="d-flex align-items-center">
                 <i class="main-table__check icon icon-circle-check"></i>
-                Metaprogramming
+                <p class="goals-page__table-txt mb-0">Metaprogramming</p>
               </div>
             </td>
             <td>16.08.2019</td>
@@ -68,7 +75,7 @@
             <td>
               <div class="d-flex align-items-center">
                 <i class="main-table__check main-table__check--active icon icon-circle-check-filled"></i>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                <p class="goals-page__table-txt mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               </div>
             </td>
             <td>12.08.2019</td>

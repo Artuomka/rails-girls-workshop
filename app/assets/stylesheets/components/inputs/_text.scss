@@ -10,6 +10,10 @@ $input-height-xs: 40px;
   }
   .main-input__field {
     border-color: $error-color;
+    &:hover,
+    &:focus {
+      border-color: $error-color;
+    }
   }
   .main-input__message {
     display: block;

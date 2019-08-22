@@ -2,10 +2,7 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  padding-top: 28px;
-  @include media-breakpoint-up(md) {
-    padding-top: 48px;
-  }
+  padding-top: 48px;
 }
 .goals-page__container {
   display: flex;
@@ -44,5 +41,22 @@
   @include media-breakpoint-up(lg) {
     padding-right: 40px;
     padding-left: 40px;
+  }
+}
+@include media-breakpoint-down(xs) {
+  .goals-page__table {
+    table-layout: fixed;
+    td,
+    th {
+      &:nth-child(2),
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+  .goals-page__table-txt {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }

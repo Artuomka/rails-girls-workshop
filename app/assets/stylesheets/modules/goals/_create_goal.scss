@@ -13,7 +13,7 @@ $create-goal-card-footer: 68px;
   justify-content: flex-end;
   height: $create-goal-card-footer;
   padding: 14px 16px;
-  background-color: white;
+  background-color: color(white-100);
 }
 .create-goal__input-short {
   @include media-breakpoint-up(md) {

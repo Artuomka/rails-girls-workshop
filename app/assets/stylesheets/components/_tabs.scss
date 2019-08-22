@@ -3,7 +3,7 @@
   overflow-x: auto;
 }
 .main-tab__item {
-  @include transition(color);
+  @include transition-settings(color);
   flex-shrink: 0;
   margin-right: 20px;
   padding-top: 23px;

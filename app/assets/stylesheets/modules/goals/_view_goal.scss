@@ -1,0 +1,68 @@
+$view-goal-card-padding-x: 20px;
+$view-goal-card-padding-x-md: 40px;
+.view-goal {
+  padding-top: 0;
+}
+.view-goal-nav {
+  display: flex;
+  align-items: center;
+  height: 68px;
+  margin-bottom: 20px;
+  background-color: color(white-100);
+  @include media-breakpoint-up(md) {
+    margin-bottom: 40px;
+  }
+}
+.view-goal-card__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px $view-goal-card-padding-x;
+  border-bottom: 3px solid color(black-10);
+  @include media-breakpoint-up(md) {
+    padding-right: $view-goal-card-padding-x-md;
+    padding-left: $view-goal-card-padding-x-md;
+  }
+}
+.view-goal-card__body {
+  padding: 20px $view-goal-card-padding-x;
+  @include media-breakpoint-up(md) {
+    min-height: 400px;
+    padding: 40px $view-goal-card-padding-x-md;
+  }
+}
+.view-goal-card__title {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  line-height: division(32, 24);
+}
+.view-goal-card__subheader {
+  margin-bottom: 32px;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 24px;
+  }
+}
+.view-goal-card__details {
+  display: flex;
+  margin-bottom: 16px;
+  @include media-breakpoint-up(md) {
+    margin-right: 40px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.view-goal-card__details-label {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+  color: color(grey-90);
+}
+.view-goal-card__descr {
+  max-width: 548px;
+}
+.view-goal-card__descr-label {
+  margin-bottom: 12px;
+  color: color(grey-90);
+}

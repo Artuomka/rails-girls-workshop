@@ -1,0 +1,27 @@
+.icon-btn {
+  @include transition-settings(color);
+  color: color(grey-90);
+  font-size: 16px;
+  line-height: division(24, 16);
+  &:hover {
+    color: color(grey-100);
+  }
+}
+.icon-btn__icon {
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.icon-btn__txt {
+  display: inline-block;
+  vertical-align: middle;
+}
+.icon-btn--blue {
+  color: color(blue-100);
+  &:hover {
+    color: color(blue-110);
+  }
+  &:focus {
+    color: color(blue-120);
+  }
+}

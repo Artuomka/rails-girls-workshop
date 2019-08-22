@@ -23,13 +23,13 @@ $input-height-xs: 40px;
   line-height: division(20, 14);
 }
 .main-input__field {
-  @include transition(border-color);
+  @include transition-settings(border-color);
   height: $input-height;
   padding-right: 14px;
   padding-left: 14px;
-  border: 1px solid rgba(black, 0.2);
+  border: 1px solid color(black-20);
   border-radius: $border-radius;
-  background-color: white;
+  background-color: color(white-100);
   font-size: 18px;
   font-weight: 600;
   line-height: division(26, 18);

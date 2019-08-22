@@ -3,16 +3,19 @@
   flex-direction: column;
   flex-grow: 1;
   padding-top: 28px;
-  padding-bottom: 28px;
   @include media-breakpoint-up(md) {
     padding-top: 48px;
-    padding-bottom: 48px;
   }
 }
 .goals-page__container {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+}
+.goals-page__card {
+  flex-grow: 1;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .goals-page__title {
   flex-shrink: 0;

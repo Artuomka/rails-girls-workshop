@@ -1,10 +1,17 @@
-<div class="col-lg-10 offset-lg-1">
-  <h3>List of stubs</h3>
-  <ul>
-    <% @page_files.each do |key| %>
-      <li>
-        <%= link_to key, key %>
-      </li>
-    <% end %>
-  </ul>
+<div class="goals-page container">
+  <div class="row">
+    <div class="col-lg-10 offset-lg-1">
+      <h3>List of stubs</h3>
+
+      <div class="main-card">
+        <ul>
+          <% @page_files.each do |key| %>
+          <li>
+            <%= link_to key, key %>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>

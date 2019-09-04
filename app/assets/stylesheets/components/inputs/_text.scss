@@ -4,7 +4,7 @@ $input-height-xs: 40px;
 .main-input {
   margin-bottom: 20px;
 }
-.main-input--error {
+.field_with_errors {
   .main-input__label {
     color: $error-color;
   }
@@ -15,9 +15,21 @@ $input-height-xs: 40px;
       border-color: $error-color;
     }
   }
-  .main-input__message {
+  .error {
+    @extend .icon-triangle-warning-sm;
     display: block;
+    padding-top: 4px;
     color: $error-color;
+    font-size: 14px;
+    letter-spacing: -0.19px;
+    line-height: division(20, 14);
+    &:before {
+      @extend .icon;
+      display: inline-block;
+      margin-right: 4px;
+      font-size: 20px;
+      vertical-align: top;
+    }
   }
 }
 .main-input__label {

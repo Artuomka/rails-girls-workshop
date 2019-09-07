@@ -1,0 +1,25 @@
+<!-- This page ha sthe same HTML as 'Create goal' page. The only difference is title name -->
+<div class="goals-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <h1 class="goals-page__title">Edit Goal</h1>
+
+        <div class="create-goal__card main-card">
+            <%= simple_form_for @goal, defaults: { label_html: { class: 'main-input__label' } } do |f| %>
+            <%= f.input :title, input_html: { class: 'main-input__field' }, wrapper_html: { class: 'main-input' }, required: false %>
+            <%= f.input :description, input_html: { class: 'main-input__field main-input__field--textarea', rows: 4 }, wrapper_html: { class: 'main-input' }, required: false %>
+            <%= f.input :priority, selected: [ ['Low', 'low'] ], collection: [['Low', 'low'], ['Medium', 'medium'], ['High', 'high']], input_html: { class: 'main-input__field main-input__field--xs' }, wrapper_html: { class: 'create-goal__input-short  main-input' }  %>
+            <%= f.input :due_date, as: :string, input_html: { class: 'main-input__field main-input__field--xs', type: 'date' }, wrapper_html: { class: 'create-goal__input-short  main-input' }, required: false %>
+            <div class="create-goal__form-footer">
+                <%= link_to goals_path do %>
+                <button type="button" class="main-btn main-btn--xs main-btn--grey mr-16">Cancel</button>
+                <% end %>
+                <%= f.button :submit, class: 'main-btn main-btn--xs main-btn--submit' %>
+            </div>
+            <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

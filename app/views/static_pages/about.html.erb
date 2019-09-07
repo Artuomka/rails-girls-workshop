@@ -1,0 +1,24 @@
+<div class="info-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <h1 class="info-page__title">Self-development goals tracker</h1>
+        <h2 class="info-page__subtitle">
+          BeFocused is a convenient centralized personal space for any students, learners or other interested in self-education and self-development people.
+        </h2>
+        <div class="info-page__descr">
+          <p>Moreover, setting goals in the right way can help you achieve them! Each goal should be <strong>SMART</strong>, and here’s what it means:</p>
+          <p><strong>Specific:</strong> Well defined, clear, and unambiguous</p>
+          <p><strong>Measurable:</strong> With specific criteria that measure your progress towards the accomplishment of the goal</p>
+          <p><strong>Achievable:</strong> Attainable and not impossible to achieve</p>
+          <p><strong>Realistic:</strong> Within reach, realistic, and relevant to your life purpose</p>
+          <p><strong>Timely:</strong> With a clearly defined timeline, including a starting date and a target date. The purpose is to create urgency.</p>
+        </div>
+        <%= link_to 'Get Started', goals_path,  class: "main-btn" %>
+      </div>
+      <div class="col-lg-5 offset-lg-1 d-none d-lg-block">
+        <%=image_tag('process_1440.svg', alt: 'Process', class: 'info-page__img')%>
+      </div>
+    </div>
+  </div>
+</div>

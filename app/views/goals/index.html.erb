@@ -1,0 +1,94 @@
+<div class="goals-page">
+  <div class="goals-page__container container">
+
+    <% if Goal.exists? %>
+<% flash.each do |type, message| %>
+  <div class="main-alert main-alert--<%= type %>">
+    <i class="main-alert__icon icon icon-circle-check-bold"></i>
+    <p class="main-alert__txt">
+      <%= message %>
+    </p>
+  </div>
+<% end %>
+
+      <div class="goals-page__header">
+        <h1 class="goals-page__title">My Goals</h1>
+        <%= link_to 'Create a Goal', new_goal_path,  class: "main-btn main-btn--xs mb-20 d-md-none" %>
+      </div>
+
+      <div class="goals-page__nav main-card">
+        <div class="main-tab">
+          <%= link_to "All #{Goal.count}", goals_path,  class: "main-tab__item #{'main-tab__item--active' if params[:filter].blank?}" %>
+          <%= link_to "Incomplete #{Goal.incomplete.count}", goals_path(filter: 'incomplete'),  class: "main-tab__item #{'main-tab__item--active' if params[:filter] == 'incomplete'}" %>
+          <%= link_to "Completed #{Goal.completed.count}", goals_path(filter: 'completed'),  class: "main-tab__item #{'main-tab__item--active' if params[:filter] == 'completed'} " %>
+        </div>
+        <div class="d-none d-md-block">
+          <%= link_to 'Create a Goal', new_goal_path,  class: "main-btn main-btn--xs" %>
+        </div>
+      </div>
+
+      <div class="goals-page__card main-card">
+        <div class="overflow-x-auto">
+          <table class="goals-page__table main-table">
+            <thead>
+              <tr>
+                <th>Goal Name</th>
+                <th width="160">Due Date</th>
+                <th width="160">Priority</th>
+              </tr>
+            </thead>
+            <tbody>
+
+        <% @goals.each do |goal| %>
+          <% if goal.complete?%>
+            <tr class="main-table__row--checked">
+          <% else %>
+            <tr>
+          <% end %>
+              <td>
+                <div class="d-flex align-items-center">
+                  <% if goal.complete?%>
+                    <i class="main-table__check main-table__check--active icon icon-circle-check-filled"></i>
+                  <% else %>
+                    <i class="main-table__check icon icon-circle-check"></i>
+                  <% end %>
+                  <%= link_to goal.title, goal_path(goal) %>
+                </div>
+              </td>
+              <td>
+                <%= goal.due_date %>
+              </td>
+              <td>
+                <div class="d-flex align-items-center">
+                  <% if goal.low? %>
+                    <i class="in-low mr-4 icon icon-arrow-down"></i>
+                  <% elsif goal.medium? %>
+                    <i class="in-medium mr-4 icon icon-arrow-up"></i>
+                  <% else %>
+                    <i class="in-high mr-4 icon icon-arrow-up"></i>
+                  <% end %>
+                  <%= goal.priority.capitalize %>
+                </div>
+              </td>
+            </tr>
+        <% end %>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            <% else %>
+
+      <h1 class="goals-page__title">My Goals</h1>
+
+      <div class="empty-goals__card main-card">
+        <%=image_tag('working.svg', alt: 'Process', class: 'empty-goals__img')%>
+
+        <p class="empty-goals__descr">You have no goals. Not going to lie, this is a bit sad.</p>
+
+        <%= link_to 'Create a Goal', new_goal_path,  class: "main-btn"%>
+      </div>
+
+    <% end %>
+  </div>
+</div>
